@@ -26,5 +26,5 @@ The following folders are available for collaboration on the defined content. Al
 
 - [C-CDA](C-CDA/readme.md)
 - [PCS](PCS/readme.md)
-- [RIPT](RIPT/readme.md)
+- [RIPT](RIPT/ript_emrhin)
 - [Transformations](Transformations/README.md)

@@ -1,0 +1,32 @@
+numpy
+pandas
+certifi
+logging
+pathlib
+urllib3
+pyfiglet
+fastavro
+sqlalchemy
+requests
+colorama
+colorful
+curlify
+charset-normalizer
+confluent-kafka # ==1.9.2
+mysql-connector-python
+DateTime
+prettyprinter
+
+python-dotenv
+
+# idna==3.4
+# pika==1.3.1
+# Pygments==2.13.0
+# pytz==2022.5
+# zope.interface==5.5.0
+
+
+
+
+# import boto3
+# import watson
