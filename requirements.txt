@@ -1,0 +1,24 @@
+numpy
+pandas
+fastavro
+colorful
+requests
+curlify
+#mysql-connector-python
+# confluent-kafka==1.9.2
+# amazon-textract
+# boto3
+# sqlalchemy
+urllib3
+certifi
+charset-normalizer
+DateTime
+prettyprinter
+# idna==3.4
+# pika==1.3.1
+# Pygments==2.13.0
+# pytz==2022.5
+# zope.interface==5.5.0
+
+python-dotenv
+
