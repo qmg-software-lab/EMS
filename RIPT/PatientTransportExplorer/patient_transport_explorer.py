@@ -58,38 +58,31 @@ print('-------------------------------------------------------------------------
 logger.info(' logger file path =\n{}'.format(file_path))
 
 
-# Open Issues and Questions
-# 1. How can we reuse transactions and create transactions based on its use in QEDm?
-#    Patient Medical History and risk factors map to multiple FHIR resources: Procedures,
-# conditions, date of onset.
-# Should we subsume the mappings in the ETS and ITS Profiles into this profile and
-# deprecate them?
-# There is a FHIR resource gap for Transport instructions.
-# Should the Transport Data Consumer and Transport Data Responder Actors have a more
-# generic name such as Data Consumer and Data Responder?
-# 6. There is no LOINC code for Revised Trauma Score.
-# 7. Cannot find the NEMSIS copyright statement.
+# A few potential open issues and questions
+    # 1. How can we reuse transactions and create transactions based on its use in QEDm?
+    # 2. Patient Medical History and risk factors map to multiple FHIR resources: Procedures, conditions, date of onset.
+    # 3. Should we subsume the mappings in the ETS and ITS Profiles into this profile and deprecate them?
+    # 4. There is a FHIR resource gap for Transport instructions.
+    # 5. Should the Transport Data Consumer and Transport Data Responder Actors have a more generic name such as Data Consumer and Data Responder?
+    # 6. There is no LOINC code for Revised Trauma Score.
+    # 7. Cannot find the NEMSIS copyright statement.
 
 
-# ToDo Step 0: Ingest sample dataframe
-def sendero():
-    qry_get_sample_data_frame_without_a_name = """
-        SELECT * FROM LATERAL (  ) 
+def patid_list():
+    qry_get_patient_eids =
 
-
-
-    """
-
-    sample_dataframe_without_a_name_dict = {}
-    # function to kickoff dataflow
-    gen_a_sample_dataframe_without_a_name_is_the_game = pd.read_sql_query('qry_get_sample_dataframe_without_a_name')
-
-    return sample_dataframe_without_a_name_dict
-
-
-# ToDo Step 1: Hospital EMR has patient information in the system
+# Step 1: ToDo -> Hospital EMR has patient information in the system
 def patient_record():
-    pat_record_id_dict = {}
+
+    # fetch patient eid list
+    fcn_patid_list_df = patid_list()
+
+    # demo dataframe
+    pat_record_eid_dict = {
+        '123456789': 'saint_marks_saltlakecity',
+        '2468101214': 'steward_lehi',
+        '1122334455': 'Salt Lake Regional Med Ctr'
+    }
     logger.info(' Validating patient record cycle for transfer eligibility...\n...please wait')
     try:
         # Create an in-memory SQLite database
@@ -132,22 +125,7 @@ if __name__ == "__main__":
         logger.error(f"Failed to retrieve patient records: {e}")
 
 
-# Step 1: ToDo: Hospital EMR has patient information in the system
-def patient_record():
-    pat_record_id_dict = {}
-    logger.info(' validating patient record for transfer eligibility...\n ...please wait...')
-    try:
-        conn = connect(':memory:')
-        df = pd.DataFrame(data=[[0, '10/ 11/ 12'], [1, '12/ 11/ 10']], columns=['int_column', 'date_column'])
-        # qry_pat_details = pd.read_sql() 'qry_get_patient_details')
-        df.to_sql(name='test_data', con=conn)
-    except Exception as e_pat_record_missing:
-        logger.ERROR(' No patient record id found: {}'.format(e_pat_record_missing))
-    finally:
-        conn.close()
-    if pat_record_id:
-        pass
-    return pat_record_id_dict
+
 
 
 pat_eid_list = patient_record()

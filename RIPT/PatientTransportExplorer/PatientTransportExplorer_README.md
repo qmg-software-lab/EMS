@@ -1,11 +1,8 @@
-available text for metadata and documentation development (drafting)
-
 
 # Patient Transport Explorer 
-Python Module 
 
-> ## Clinical Data Mapping to EMS Cluster
->
+> ## Clinical Data Mapping to EMS schemas  
+> edi metadata for python module 
 > #### Pre-conditions
 >  1. Hospital EMR has patient information in the system
 >  2. Physician Clears Patient for discharge
@@ -16,19 +13,27 @@ Python Module
 >  patient care record have an established XD* infrastructure.
 > 
 > #### Main Flow
-> 1. Transport teams arrives at the pick-up location and queries the patient information from
+> 1. Transport team arrives at the pick-up location and queries the patient information from
 > the Hospital EMR to populate the patient care record system.
-> 2. Transport team receives nurse report and transfer of care
-> Patient contact is made and transport is started
+> 2. Transport team receives nurse report and transfer of care Patient contact is made and transport is started
 > 
 > #### Post-conditions
 > 1. Patient information is updated in the patient care record system during transport.
 > 3. Patient is transferred to the care of the drop-off facility staff.
 >
 > ###
-> ## Terminology Resources
->   - https://terminology.hl7.org/1.0.0/CodeSystem-conceptdomains.html
-> ###
+> ### Terminology Resources
+>   - HL7 FHIR 
+>     - https://terminology.hl7.org/1.0.0/CodeSystem-conceptdomains.html
+>   - SNOWMED CT
+>     - www.snomed.org 
+>   - The International Classification of Diseases (ICD) is used to standardize health data for analytics.
+>     - https://www.cdc.gov/nchs/icd/icd-10/index.html
+>     - pcs is on this list too
+>   - 
+> 
+> 
+> 
 >
 > 
 # Sample RIPT

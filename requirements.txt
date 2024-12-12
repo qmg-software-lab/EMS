@@ -3,8 +3,10 @@ pandas
 fastavro
 colorful
 requests
-curlify
-#mysql-connector-python
+colorama.FORE
+pyfiglet
+prettyprinter.pprint
+# mysql-connector-python
 # confluent-kafka==1.9.2
 # amazon-textract
 # boto3
